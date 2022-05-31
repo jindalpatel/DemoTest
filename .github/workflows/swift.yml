@@ -12,6 +12,5 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v3
     - name: Build
-      run: cd .../PasswordEncryption/
+      run: cd PasswordEncryption
