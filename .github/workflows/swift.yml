@@ -14,3 +14,4 @@ jobs:
     steps:
     - name: Build
       run: cd PasswordEncryption
+      working-directory: PasswordEncryption
