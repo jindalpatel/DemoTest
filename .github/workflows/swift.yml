@@ -12,13 +12,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - working-directory: PasswordEncryption
       - name: Build
+        working-directory: PasswordEncryption
         run: |
           xcodebuild clean build -project DemoTest.xcodeproj -scheme DemoTest -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         env: 
          destination: ${{ matrix.destination }}
       - name: Test
+        working-directory: PasswordEncryption
         run: |
           xcodebuild clean test -project DemoTest.xcodeproj -scheme DemoTest -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         env: 
