@@ -11,6 +11,7 @@ jobs:
           destination: ['platform=iOS Simulator,OS=15.2,name=iPhone 11 Pro']
     steps:
       - name: Checkout
+        working-directory: PasswordEncryption
         run: |
           python3 test_appium.py
 
