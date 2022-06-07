@@ -11,14 +11,6 @@ jobs:
           destination: ['platform=iOS Simulator,OS=15.2,name=iPhone 11 Pro']
     steps:
       - name: Checkout
-        uses: actions/checkout@master
-      - name: Build
         run: |
-          xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-        env: 
-         destination: ${{ matrix.destination }}
-      - name: Test
-        run: |
-          xcodebuild clean test -project PasswordEncryption.xcworkspace -scheme PasswordEncryption -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-        env: 
-         destination: ${{ matrix.destination }}
+          python3 test_appium.py
+
