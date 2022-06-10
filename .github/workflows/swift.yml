@@ -2,6 +2,9 @@ name: CI-Test
 
 on: workflow_dispatch
 
+env:
+  DAY_OF_WEEK: Monday
+
 jobs:
   test:
     name: Test
