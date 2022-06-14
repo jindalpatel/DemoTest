@@ -11,7 +11,7 @@ jobs:
     runs-on: macos-latest
     strategy:
         matrix:
-          destination: ['platform=iOS Simulator,OS=15.2,name=iPhone 11 Pro','platform=iOS Simulator,OS=14.2,name=iPhone 11 Pro']
+          destination: ['14.5','15.2']
     steps:
       - name: Checkout
         uses: actions/checkout@v2 # checkout the repository content to github runner.
@@ -24,5 +24,5 @@ jobs:
         run: |
             echo '${{matrix.destiation }}'
             python3 -m pip install Appium-Python-Client
-            python3 test_appium.py "14.5"
+            python3 test_appium.py ${{ matrix.destination }}
 
