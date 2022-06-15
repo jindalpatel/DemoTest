@@ -1,6 +1,6 @@
 name: CI-Test
 
-on: [push]
+on: workflow_dispatch
 
 env:
   DAY_OF_WEEK: Monday
