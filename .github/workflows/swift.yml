@@ -1,21 +1,6 @@
 name: CI-Test
 
-on:
-  workflow_dispatch:
-    inputs:
-      name:
-        type: choice
-        description: Who to greet
-        options: 
-        - monalisa
-        - cschleiden
-      message:
-        required: true
-      use-emoji:
-        type: boolean
-        description: Include  emojis
-      environment:
-        type: environment
+on: [push]
 
 env:
   DAY_OF_WEEK: Monday
