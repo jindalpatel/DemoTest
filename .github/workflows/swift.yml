@@ -21,7 +21,7 @@ jobs:
       - name: building
         run: |
          xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -configuration Debug -destination "platform=iOS Simulator,OS=15.2,name=iPad (7th generation)"
-         xcodebuild -scheme PasswordEncryption archive
+         xcodebuild -scheme PasswordEncryption archive -allowProvisioningUpdates
    #      xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption clean archive -configuration release -sdk iphoneos -archivePath PasswordEncryption.xcarchive CODE_SIGN_STYLE = Automatic
    #      xcodebuild -exportArchive -archivePath PasswordEncryption.xcarchive -exportOptionsPlist  PasswordEncryption/info.plist -exportPath  PasswordEncryption.ipa
       - name: setup python
