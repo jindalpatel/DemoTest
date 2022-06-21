@@ -20,8 +20,9 @@ jobs:
           ref: cicd_testing
       - name: building
         run: |
-         xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption clean archive -configuration release -sdk iphoneos -archivePath PasswordEncryption.xcarchive CODE_SIGN_STYLE = Automatic
-         xcodebuild -exportArchive -archivePath PasswordEncryption.xcarchive -exportOptionsPlist  PasswordEncryption/info.plist -exportPath  PasswordEncryption.ipa
+         xcodebuild -workspace SplunkRumWorkspace/SplunkRumWorkspace.xcworkspace -scheme SmokeTest -configuration Debug test -destination platform="iPhone 11 Pro Simulator"
+   #      xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption clean archive -configuration release -sdk iphoneos -archivePath PasswordEncryption.xcarchive CODE_SIGN_STYLE = Automatic
+   #      xcodebuild -exportArchive -archivePath PasswordEncryption.xcarchive -exportOptionsPlist  PasswordEncryption/info.plist -exportPath  PasswordEncryption.ipa
       - name: setup python
         uses: actions/setup-python@v2
         with:
