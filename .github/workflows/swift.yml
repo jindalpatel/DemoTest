@@ -20,8 +20,8 @@ jobs:
           ref: cicd_testing
       - name: building
         run: |
-         xcodebuild -workspace PasswordEncryption/PasswordEncryption.xcworkspace -scheme PasswordEncryption clean archive -configuration release -sdk iphoneos -archivePath PasswordEncryption.xcarchive
-         xcodebuild -exportArchive -archivePath PasswordEncryption.xcarchive -exportOptionsPlist  PasswordEncryption/exportOptions.plist -exportPath  PasswordEncryption.ipa
+         xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption clean archive -configuration release -sdk iphoneos -archivePath PasswordEncryption.xcarchive
+         xcodebuild -exportArchive -archivePath PasswordEncryption.xcarchive -exportOptionsPlist  PasswordEncryption/info.plist -exportPath  PasswordEncryption.ipa
       - name: setup python
         uses: actions/setup-python@v2
         with:
