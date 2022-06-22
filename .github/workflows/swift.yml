@@ -23,10 +23,10 @@ jobs:
           ref: cicd_testing
       - name: building
         run: |
+          exit 1
           xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -configuration Debug -destination "platform=iOS Simulator,OS=15.2,name=iPod touch (7th generation)" -derivedDataPath SmokeBuild
           cd ~/$BUILD_FOLDER/$BUILD_PATH/$BUILD_NAME
           ls
-          exit 0
       - name: setup python
         uses: actions/setup-python@v2
         with:
