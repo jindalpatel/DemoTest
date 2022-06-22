@@ -4,6 +4,7 @@ on: [push]
 
 env:
   DAY_OF_WEEK: Monday
+  SCHEME: SmokeTest
 
 jobs:
   test:
@@ -19,7 +20,10 @@ jobs:
         with:
           ref: cicd_testing
       - name: building
-        run: xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -configuration Debug -destination "platform=iOS Simulator,OS=15.2,name=iPod touch (7th generation)" -derivedDataPath SmokeBuild
+        run: |
+          xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -configuration Debug -destination "platform=iOS Simulator,OS=15.2,name=iPod touch (7th generation)" -derivedDataPath SmokeBuild
+          cd ~/SmokeBuild/
+          ls
       - name: setup python
         uses: actions/setup-python@v2
         with:
