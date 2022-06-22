@@ -21,7 +21,7 @@ jobs:
       - name: building
         run: |
           rm -rf ./build
-          xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -configuration Debug -destination "platform=iOS Simulator,os=15.2,device=iPhone 11 Pro Simulator"
+          xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -configuration Debug -destination "platform=iOS Simulator,OS=15.2,name=iPad (9th generation)"
         #  xcodebuild -scheme PasswordEncryption archive -allowProvisioningUpdates -destination "generic/platform=iOS"
    #      xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption clean archive -configuration release -sdk iphoneos -archivePath PasswordEncryption.xcarchive CODE_SIGN_STYLE = Automatic
    #      xcodebuild -exportArchive -archivePath PasswordEncryption.xcarchive -exportOptionsPlist  PasswordEncryption/info.plist -exportPath  PasswordEncryption.ipa
