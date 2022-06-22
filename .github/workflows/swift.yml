@@ -20,11 +20,8 @@ jobs:
           ref: cicd_testing
       - name: building
         run: |
-          rm -rf ./build
-          xcodebuild -exportArchive -scheme PasswordEncryption archive -allowProvisioningUpdates -destination "generic/platform=iOS" -exportOptionsPlist exportOptions.plist -archivePath PasswordEncryption.xcarchive
-    #      xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -configuration Debug -destination "platform=iOS Simulator,OS=15.2,name=iPad (9th generation)" 
-   #      xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption clean archive -configuration release -sdk iphoneos -archivePath PasswordEncryption.xcarchive CODE_SIGN_STYLE = Automatic
-   #      xcodebuild -exportArchive -archivePath PasswordEncryption.xcarchive -exportOptionsPlist  PasswordEncryption/info.plist -exportPath  PasswordEncryption.ipa
+          xcodebuild -workspace PasswordEncryption/PasswordEncryption.xcworkspace -scheme PasswordEncryption clean archive -configuration release -sdk iphoneos -archivePath PasswordEncryption.xcarchive
+    #      xcodebuild -exportArchive -scheme PasswordEncryption archive -allowProvisioningUpdates -destination "generic/platform=iOS" -exportOptionsPlist exportOptions.plist -archivePath PasswordEncryption.xcarchive
       - name: setup python
         uses: actions/setup-python@v2
         with:
