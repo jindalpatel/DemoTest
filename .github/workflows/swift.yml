@@ -5,6 +5,7 @@ on: [push]
 env:
   DAY_OF_WEEK: Monday
   SCHEME: SmokeTest
+  PROJECT_NAME: DemoTest
 
 jobs:
   test:
@@ -22,7 +23,7 @@ jobs:
       - name: building
         run: |
           xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -configuration Debug -destination "platform=iOS Simulator,OS=15.2,name=iPod touch (7th generation)" -derivedDataPath SmokeBuild
-          cd ~/SmokeBuild/
+          cd ~/work/{$env.PROJECT_NAME}/{$env.PROJECT_NAME}/SmokeBuild/
           ls
       - name: setup python
         uses: actions/setup-python@v2
