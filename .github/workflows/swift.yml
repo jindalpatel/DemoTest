@@ -23,7 +23,7 @@ jobs:
       - name: building
         run: |
           xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -configuration Debug -destination "platform=iOS Simulator,OS=15.2,name=iPod touch (7th generation)" -derivedDataPath SmokeBuild
-          cd ~/work/{$PROJECT_NAME}/{$PROJECT_NAME}/SmokeBuild/
+          cd ~/work/$PROJECT_NAME/$PROJECT_NAME/SmokeBuild/
           ls
       - name: setup python
         uses: actions/setup-python@v2
