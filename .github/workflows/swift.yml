@@ -19,9 +19,7 @@ jobs:
         with:
           ref: cicd_testing
       - name: building
-        run: |
-          xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -sdk iphoneos -archivePath PasswordEncryption.xcarchive -allowProvisioningUpdates -configuration Ad-Hoc clean archive
-    #      xcodebuild -exportArchive -scheme PasswordEncryption archive -allowProvisioningUpdates -destination "generic/platform=iOS" -exportOptionsPlist exportOptions.plist -archivePath PasswordEncryption.xcarchive
+        run: xcodebuild -workspace PasswordEncryption.xcworkspace -scheme PasswordEncryption -configuration Debug -destination "platform=iOS Simulator,OS=15.0,name=iPod touch (7th generation)" -derivedDataPath SmokeBuild
       - name: setup python
         uses: actions/setup-python@v2
         with:
