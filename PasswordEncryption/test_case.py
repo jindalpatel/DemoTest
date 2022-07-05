@@ -46,7 +46,7 @@ class HybridIOSTests(unittest.TestCase):
         self.driver.find_element(By.ID,"Network Request").click();
         self.driver.find_element(By.ID,"URLSession").click();
         self.driver.find_element(By.ID,"post").click();
-        url = 'https://:8080/consolelog/logs.txt'
+        url = 'https://127.0.0.1:8080/consolelog/logs.txt'
         r = requests.get(url, allow_redirects=True)
         print(r)
        # Constant.method_post_validation()
