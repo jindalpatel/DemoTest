@@ -18,7 +18,7 @@ jobs:
       - name: execute py script # run the run.py to get the latest data
         run: |
             echo '${{matrix.destiation }}'
-            echo "127.0.0.1 splunkRumSmokeTest.local" >> /etc/hosts
+            sudo echo "127.0.0.1 splunkRumSmokeTest.local" >> /etc/hosts
             python3 -m pip install Appium-Python-Client
             python3 PasswordEncryption/test_appium.py ${{ matrix.destination }} "${{ matrix.devices }}"
 
