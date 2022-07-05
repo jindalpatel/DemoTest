@@ -21,7 +21,7 @@ jobs:
         working-directory: PasswordEncryption
         run: |
             echo '${{matrix.destiation }}'
-            sudo echo "127.0.0.1 splunkRumSmokeTest.local" | sudo tee -a /etc/hosts
+            sudo echo "127.0.0.1 10.202.23.131" | sudo tee -a /etc/hosts
             python3 -m pip install requests
             python3 -m pip install Appium-Python-Client
             python3 test_case.py ${{ matrix.destination }} "${{ matrix.devices }}"
