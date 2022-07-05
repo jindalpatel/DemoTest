@@ -1,3 +1,2 @@
 #!/bin/bash
-curl -O https://pagekite.net/pk/pagekite.py
-python3 pagekite.py localhost:8080 swiftJinP.pagekite.me
+echo "10.202.23.131 localhost:8080" >> /etc/hosts
