@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "localhost:8080 185.94.26.69" >> /etc/hosts
+echo "localhost:8080 10.202.23.131" >> /etc/hosts
