@@ -24,7 +24,7 @@ class HybridIOSTests(unittest.TestCase):
         caps['sauce:options']['name'] = 'Platform Configurator Job ' + currentTime
         caps['prerun'] = 'https://github.com/ZindalP/DemoTest/blob/main/config.sh'
 
-        url = 'https://sso-splunk.saucelabs.com-mahimag:274c9a94-86d1-4b12-9594-57307cfb2c57@ondemand.us-west-1.saucelabs.com:443/wd/hub'
+        url = 'https://oauth-jindal.patel-3782a:01f7c8a5-53fa-4288-b91b-7767cd2b2218@ondemand.eu-central-1.saucelabs.com:443/wd/hub'
 #oauth-jindal.patel-3782a:01f7c8a5-53fa-4288-b91b-7767cd2b2218
         self.driver=webdriver.Remote(url,caps)
     
