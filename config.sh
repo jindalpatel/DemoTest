@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "10.202.23.131 localhost:8080" >> /etc/hosts
+echo "127.0.0.1 splunkRumSmokeTest.local" >> /etc/hosts
