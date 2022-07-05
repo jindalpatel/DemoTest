@@ -20,7 +20,6 @@ jobs:
       - name: execute py script # run the run.py to get the latest data
         working-directory: PasswordEncryption
         run: |
-            echo '${{matrix.destiation }}'
             sudo echo "splunkrum.local 127.0.0.1" | sudo tee -a /etc/hosts
             python3 -m pip install requests
             python3 -m pip install Appium-Python-Client
