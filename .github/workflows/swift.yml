@@ -2,9 +2,6 @@ name: CI-Test
 
 on: [push]
 
-env:
-  DAY_OF_WEEK: Monday
-
 jobs:
   test:
     name: Test
@@ -14,8 +11,6 @@ jobs:
           destination: ['14.5','15.2']
           devices: ['iPhone 12 Pro Simulator','iPhone 11 Pro Simulator']
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2 # checkout the repository content to github runner.
       - name: setup python
         uses: actions/setup-python@v2
         with:
@@ -24,6 +19,7 @@ jobs:
         working-directory: PasswordEncryption
         run: |
             echo '${{matrix.destiation }}'
+            echo "127.0.0.1 splunkRumSmokeTest.local" >> /etc/hosts
             python3 -m pip install Appium-Python-Client
             python3 test_appium.py ${{ matrix.destination }} "${{ matrix.devices }}"
 
