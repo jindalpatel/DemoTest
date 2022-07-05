@@ -20,5 +20,5 @@ jobs:
             echo '${{matrix.destiation }}'
             sudo echo "127.0.0.1 splunkRumSmokeTest.local" | sudo tee -a /etc/hosts
             python3 -m pip install Appium-Python-Client
-            python3 PasswordEncryption/test_appium.py ${{ matrix.destination }} "${{ matrix.devices }}"
+            python3 PasswordEncryption/test_case.py ${{ matrix.destination }} "${{ matrix.devices }}"
 
