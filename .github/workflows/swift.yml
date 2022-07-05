@@ -11,15 +11,17 @@ jobs:
           destination: ['14.5','15.2']
           devices: ['iPhone 12 Pro Simulator','iPhone 11 Pro Simulator']
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2 # checkout the repository content to github runner.
       - name: setup python
         uses: actions/setup-python@v2
         with:
           python-version: 3.8 #install the python needed
       - name: execute py script # run the run.py to get the latest data
+        working-directory: PasswordEncryption
         run: |
             echo '${{matrix.destiation }}'
             sudo echo "127.0.0.1 splunkRumSmokeTest.local" | sudo tee -a /etc/hosts
-            ls ${{ github.workspace }}
             python3 -m pip install Appium-Python-Client
-            python3 PasswordEncryption/test_case.py ${{ matrix.destination }} "${{ matrix.devices }}"
+            python3 test_case.py ${{ matrix.destination }} "${{ matrix.devices }}"
 
