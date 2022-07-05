@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "103.108.207.58 localhost:8080" >> /etc/hosts
+$ curl -O https://pagekite.net/pk/pagekite.py
+$ python3 pagekite.py 80 swiftdemo.pagekite.me
