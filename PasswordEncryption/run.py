@@ -20,7 +20,7 @@ def setUp(self):
     caps['sauce:options']['build'] = 'Platform Configurator Build ' + currentDate
     caps['sauce:options']['name'] = 'Platform Configurator Job ' + currentTime
     caps['prerun'] = 'https://github.com/ZindalP/DemoTest/blob/main/config.sh'
-    url = 'https://oauth-jindal.patel-3782a:01f7c8a5-53fa-4288-b91b-7767cd2b2218@ondemand.eu-central-1.saucelabs.com:443/wd/hub'
+    url = 'https://oauth-jindalp-c7529:86220a08-6793-482f-bd86-6ccbca85ad72@ondemand.eu-central-1.saucelabs.com:443/wd/hub'
     self.driver=webdriver.Remote(url,caps)
 
         
