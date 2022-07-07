@@ -1,12 +1,9 @@
-import unittest
 from appium import webdriver
 from time import sleep
 from datetime import datetime
-import Constant
 from selenium.webdriver.common.by import By
-import requests
 
-def setUp(self):
+def setUp():
     currentDate = datetime.now().strftime('%Y-%m-%d')
     currentTime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     caps = {}
@@ -20,8 +17,8 @@ def setUp(self):
     caps['sauce:options']['build'] = 'Platform Configurator Build ' + currentDate
     caps['sauce:options']['name'] = 'Platform Configurator Job ' + currentTime
     caps['prerun'] = 'https://github.com/ZindalP/DemoTest/blob/main/config.sh'
-    url = 'https://oauth-jindalp-c7529:86220a08-6793-482f-bd86-6ccbca85ad72@ondemand.eu-central-1.saucelabs.com:443/wd/hub'
-    self.driver=webdriver.Remote(url,caps)
+    url = 'https://oauth-jindalp-c7529:86220a08-6793-482f-bd86-6ccbca85ad72@ondemand.us-west-1.saucelabs.com:443/wd/hub'
+    driver=webdriver.Remote(url,caps)
 
         
 if __name__ == "__main__":
