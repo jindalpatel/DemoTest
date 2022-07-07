@@ -20,7 +20,7 @@ def setUp():
 #         'executable' : 'https://github.com/ZindalP/DemoTest/blob/main/config.sh',
 #         'background' : 'false'
 #     }
-    url = 'https://oauth-jindalp-c7529:86220a08-6793-482f-bd86-6ccbca85ad72@ondemand.eu-central-1.saucelabs.com:443/wd/hub'
+    url = 'https://sso-splunk.saucelabs.com-mahimag:274c9a94-86d1-4b12-9594-57307cfb2c57@ondemand.us-west-1.saucelabs.com:443/wd/hub'
     driver=webdriver.Remote(url,caps)
 
         
