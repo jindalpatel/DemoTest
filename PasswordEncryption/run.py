@@ -6,11 +6,6 @@ import Constant
 from selenium.webdriver.common.by import By
 import requests
 
-
-
-setUp()
-
-    # set up appium
 def setUp(self):
     currentDate = datetime.now().strftime('%Y-%m-%d')
     currentTime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -27,3 +22,7 @@ def setUp(self):
     caps['prerun'] = 'https://github.com/ZindalP/DemoTest/blob/main/config.sh'
     url = 'https://oauth-jindal.patel-3782a:01f7c8a5-53fa-4288-b91b-7767cd2b2218@ondemand.eu-central-1.saucelabs.com:443/wd/hub'
     self.driver=webdriver.Remote(url,caps)
+
+        
+if __name__ == "__main__":
+    setUp()
