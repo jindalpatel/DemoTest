@@ -16,7 +16,7 @@ def setUp(self):
     currentTime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     caps = {}
         
-    caps['platformName'] = 'iOS
+    caps['platformName'] = 'iOS'
     caps['appium:app'] = 'storage:filename=SmokeTest.zip' # The filename of the mobile app
     caps['appium:deviceName'] = 'iPhone 11 Simulator'
     caps['appium:platformVersion'] = '15.0'
