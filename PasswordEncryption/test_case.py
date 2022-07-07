@@ -45,10 +45,7 @@ class HybridIOSTests(unittest.TestCase):
         self.driver.find_element(By.ID,"Network Request").click();
         self.driver.find_element(By.ID,"URLSession").click();
         self.driver.find_element(By.ID,"post").click();
-        url = 'http://127.0.0.1:8080/consolelog/logs.txt'
-        r = requests.get(url, allow_redirects=True)
-        print(r)
-       # Constant.method_post_validation()
+        Constant.method_post_validation()
 
     # # URL Session Network GET API call and Network Span validation.
     # def test_API_GetClick(self):
