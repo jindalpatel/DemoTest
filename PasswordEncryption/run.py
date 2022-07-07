@@ -16,7 +16,10 @@ def setUp():
     caps['sauce:options']['appiumVersion'] = '1.22.3'
     caps['sauce:options']['build'] = 'Platform Configurator Build ' + currentDate
     caps['sauce:options']['name'] = 'Platform Configurator Job ' + currentTime
-    caps['prerun'] = 'https://github.com/ZindalP/DemoTest/blob/main/config.sh'
+    caps['prerun'] = {
+        'executable' = 'https://github.com/ZindalP/DemoTest/blob/main/config.sh',
+        'background': 'false
+    }
     url = 'https://oauth-jindalp-c7529:86220a08-6793-482f-bd86-6ccbca85ad72@ondemand.eu-central-1.saucelabs.com:443/wd/hub'
     driver=webdriver.Remote(url,caps)
 
